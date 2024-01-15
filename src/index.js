@@ -40,6 +40,9 @@ export default async function register(app) {
       ProductSequence: {
         name: "ProductSequence",
       },
+      SocialMedia: {
+        name: "SocialMedia",
+      },
     },
     graphQL: {
       resolvers,

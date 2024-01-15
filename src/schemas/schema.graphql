@@ -48,6 +48,40 @@ type ProductTagsOperationPayload {
   "An array of write errors if any were generated"
   writeErrors: [WriteError]
 }
+type instagramKey {
+  key: String
+}
+input InstagramInput {
+  key: String
+}
+type instagramKeyPayload {
+  _id: ID
+  key: String
+}
+
+extend type  AddTagInput {
+  "Image URL"
+  image: String 
+
+  "priority"
+  priority: Int
+}
+
+extend type Tag {
+  "Image URL"
+  image: String 
+
+  "priority"
+  priority: Int
+}
+
+extend type UpdateTagInput {
+  "Image URL"
+  image: String 
+
+  "priority"
+  priority: Int
+}
 
 extend type Mutation {
   "Bulk operation for adding an array of tags to an array of products"
@@ -63,7 +97,9 @@ extend type Mutation {
   ): ProductTagsOperationPayload!
   assignReferenceIdsToProducts: Boolean
   unPublishProductsScript(ID: String): Boolean
+  updateInstagramKey(input: InstagramInput): instagramKeyPayload
 }
 type Query {
   updateOptionTitle: Boolean
+  InstagramKey: instagramKey
 }

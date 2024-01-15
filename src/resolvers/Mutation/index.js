@@ -12,6 +12,7 @@ import updateProductsVisibility from "./updateProductsVisibility.js";
 import updateProductPickedUpStatus from "./updateProductPickedUpStatus.js";
 import assignReferenceIdsToProducts from "./assignReferenceIdsToProducts.js";
 import unPublishProductsScript from "./unPublishProductsScript.js";
+import updateInstagramKey from "./updateInstagramKey.js";
 
 export default {
   addTagsToProducts,
@@ -27,5 +28,6 @@ export default {
   updateProductsVisibility,
   updateProductPickedUpStatus,
   assignReferenceIdsToProducts,
-  unPublishProductsScript
+  unPublishProductsScript,
+  updateInstagramKey
 };

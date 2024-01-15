@@ -1,7 +1,7 @@
 {
   "name": "@codistan-isb/bizb-api-plugin-products",
   "description": "Products plugin for the Reaction API",
-  "version": "1.1.8-development",
+  "version": "1.2.0-development",
   "main": "index.js",
   "type": "module",
   "engines": {
