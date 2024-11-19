@@ -17,6 +17,7 @@ import {
  * @returns {undefined}
  */
 export default async function register(app) {
+  // console.log("PRODUCT PLUGIN REGOSTER ON LOCAL =-+_+ +_s")
   await app.registerPlugin({
     label: "Products",
     name: "products",
