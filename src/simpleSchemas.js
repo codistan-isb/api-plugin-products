@@ -251,9 +251,9 @@ export const ProductVariant = new SimpleSchema({
     type: Date,
     optional: true,
   },
-  brandId:{
-    type:String,
-    optional:true
+  brandId: {
+    type: String,
+    optional: true
   },
   weight: {
     type: Number,
@@ -330,7 +330,7 @@ export const Product = new SimpleSchema({
   },
   uploadedBy: {
     type: Array,
-    optional:true
+    optional: true
   },
   "uploadedBy.$": {
     type: String,
@@ -436,9 +436,9 @@ export const Product = new SimpleSchema({
   title: {
     type: String,
   },
-  brandId:{
-    type:String,
-    optional:true
+  brandId: {
+    type: String,
+    optional: true
   },
   twitterMsg: {
     type: String,
