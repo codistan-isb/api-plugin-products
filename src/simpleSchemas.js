@@ -323,6 +323,7 @@ export const Product = new SimpleSchema({
     label: "Brand ID",
 
   },
+
   referenceId: {
     type: String,
     optional: true,
@@ -421,6 +422,7 @@ export const Product = new SimpleSchema({
   shopId: {
     type: String,
   },
+
   shouldAppearInSitemap: {
     type: Boolean,
     optional: true,

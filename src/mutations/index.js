@@ -10,12 +10,14 @@ import updateProductVariant from "./updateProductVariant.js";
 import updateProductsVisibility from "./updateProductsVisibility.js";
 import updateProductPickedUpStatus from "./updateProductPickedUpStatus.js";
 import unPublishProductsScript from "./unPublishProductsScript.js";
+import createAdminProduct from "./createAdminProduct.js";
 export default {
   addTagsToProducts,
   archiveProducts,
   cloneProducts,
   cloneProductVariants,
   createProduct,
+  createAdminProduct,
   createProductVariant,
   removeTagsFromProducts,
   updateProductPickedUpStatus,

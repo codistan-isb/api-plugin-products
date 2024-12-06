@@ -375,6 +375,19 @@ input CreateProductInput {
   shouldCreateFirstVariant: Boolean = true
 }
 
+input CreateAdminProductInput {
+  "Product input"
+  product: ProductInput
+
+  "ID of shop product will belong to"
+  shopId: ID!
+
+  sellerId: ID!
+
+  "Set to false if you do not want to auto-create the first variant of the product"
+  shouldCreateFirstVariant: Boolean = true
+}
+
 "Input for the `createProductVariant` mutation"
 input CreateProductVariantInput {
   "ID of product variant belongs to"
@@ -488,6 +501,52 @@ input ProductInput {
   referenceId: String
 }
 
+input ProductInputForAdmin {
+  _id: String
+
+  sellerId: ID
+
+  brandId: ID
+
+  description: String
+
+  facebookMsg: String
+
+  googleplusMsg: String
+
+  isDeleted: Boolean
+
+  isVisible: Boolean
+
+  metaDescription: String
+
+  metafields: [MetafieldInput]
+
+  originCountry: String
+
+  pageTitle: String
+
+  pinterestMsg: String
+
+  productType: String
+
+  shouldAppearInSitemap: Boolean
+
+  slug: String
+
+  supportedFulfillmentTypes: [FulfillmentType]
+
+  tagIds: [ID]
+
+  title: String
+
+  twitterMsg: String
+
+  vendor: String
+
+  referenceId: String
+}
+
 "Mutation input for a product variant or option"
 input ProductVariantInput {
   """
@@ -582,6 +641,7 @@ enum ProductSortByField {
   "Date and time the product was last updated"
   updatedAt
 }
+
 enum inventoryStatusInput {
   pickedUp
   sold
@@ -620,6 +680,10 @@ extend type Mutation {
     input: CreateProductInput!
   ): CreateProductPayload!
 
+  createAdminProduct(
+    "Mutation input"
+    input: CreateAdminProductInput!
+  ): CreateProductPayload!
   "Create a new product variant"
   createProductVariant(
     "Mutation input"
