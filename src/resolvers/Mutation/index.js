@@ -13,6 +13,7 @@ import updateProductPickedUpStatus from "./updateProductPickedUpStatus.js";
 import assignReferenceIdsToProducts from "./assignReferenceIdsToProducts.js";
 import unPublishProductsScript from "./unPublishProductsScript.js";
 import updateInstagramKey from "./updateInstagramKey.js";
+import createAdminProduct from "./createAdminProduct.js";
 
 export default {
   addTagsToProducts,
@@ -21,6 +22,7 @@ export default {
   cloneProducts,
   cloneProductVariants,
   createProduct,
+  createAdminProduct,
   createProductVariant,
   removeTagsFromProducts,
   updateProduct,
