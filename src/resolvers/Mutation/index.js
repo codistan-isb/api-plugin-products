@@ -14,6 +14,7 @@ import assignReferenceIdsToProducts from "./assignReferenceIdsToProducts.js";
 import unPublishProductsScript from "./unPublishProductsScript.js";
 import updateInstagramKey from "./updateInstagramKey.js";
 import createAdminProduct from "./createAdminProduct.js";
+import createProductVarianForAdmin from "./createProductVarianForAdmin.js";
 
 export default {
   addTagsToProducts,
@@ -24,6 +25,7 @@ export default {
   createProduct,
   createAdminProduct,
   createProductVariant,
+  createProductVarianForAdmin,
   removeTagsFromProducts,
   updateProduct,
   updateProductVariant,

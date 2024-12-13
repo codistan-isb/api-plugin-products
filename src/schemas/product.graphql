@@ -692,6 +692,11 @@ extend type Mutation {
     input: CreateProductVariantInput!
   ): CreateProductVariantPayload!
 
+  createProductVarianForAdmin(
+    "Mutation input"
+    input: CreateProductVariantInput!
+  ): CreateProductVariantPayload!
+
   "Clone an existing product"
   cloneProducts(
     "Mutation input"

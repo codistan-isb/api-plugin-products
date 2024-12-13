@@ -11,6 +11,7 @@ import updateProductsVisibility from "./updateProductsVisibility.js";
 import updateProductPickedUpStatus from "./updateProductPickedUpStatus.js";
 import unPublishProductsScript from "./unPublishProductsScript.js";
 import createAdminProduct from "./createAdminProduct.js";
+import createProductVarianForAdmin from "./createProductVarianForAdmin.js";
 export default {
   addTagsToProducts,
   archiveProducts,
@@ -19,6 +20,7 @@ export default {
   createProduct,
   createAdminProduct,
   createProductVariant,
+  createProductVarianForAdmin,
   removeTagsFromProducts,
   updateProductPickedUpStatus,
   updateProduct,
