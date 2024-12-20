@@ -3,8 +3,6 @@ type Product {
   "Product ID"
   _id: ID!
 
-  isSoldOut: Boolean
-
   "BrandID of the product"
   brandId: ID
 
