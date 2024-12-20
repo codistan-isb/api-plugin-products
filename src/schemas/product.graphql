@@ -3,6 +3,8 @@ type Product {
   "Product ID"
   _id: ID!
 
+  isSoldOut: Boolean
+
   "BrandID of the product"
   brandId: ID
 
@@ -118,6 +120,10 @@ type Product {
   vendor: String
 }
 
+type soldOut {
+  isSoldOut: Boolean
+}
+
 enum sizeType {
   Small
   Medium
@@ -153,6 +159,8 @@ type ProductVariant {
 
   "True if this variant is visible. Hidden variants are not published to the catalog."
   isVisible: Boolean!
+
+  checkSoldOut: checkSoldOut
 
   "The length of the product, if it has physical dimensions"
   length: Float
@@ -215,6 +223,11 @@ type productStoreInfo {
   name: String
   userId: ID
 }
+
+type checkSoldOut {
+  isSoldOut: Boolean
+}
+
 # type productStoreInfoResolver {
 #   storeName: String
 #   name: String
@@ -711,6 +724,11 @@ extend type Mutation {
 
   "Update an existing product"
   updateProduct(
+    "Mutation input"
+    input: UpdateProductInput!
+  ): UpdateProductPayload!
+
+  updateProductForAdmin(
     "Mutation input"
     input: UpdateProductInput!
   ): UpdateProductPayload!
