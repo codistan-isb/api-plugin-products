@@ -32,6 +32,8 @@ export default async function products(_, args, context, info) {
     priceMin,
     priceMax,
     storeName,
+    startDate,
+    endDate,
     ...connectionArgs
   } = args;
   // console.log("context", context.user);
@@ -53,7 +55,9 @@ export default async function products(_, args, context, info) {
     metafieldValue,
     priceMin,
     priceMax,
-    storeName
+    storeName,
+    startDate,
+    endDate
   });
 
   return getPaginatedResponse(query, connectionArgs, {
