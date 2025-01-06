@@ -783,6 +783,10 @@ extend type Query {
 
     storeName: ID
 
+    startDate: DateTime
+
+    endDate: DateTime
+
     "Return only results that come after this cursor. Use this with `first` to specify the number of results to return."
     after: ConnectionCursor
 

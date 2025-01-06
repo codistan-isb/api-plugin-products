@@ -28,6 +28,14 @@ const filters = new SimpleSchema({
     type: String,
     optional: true
   },
+  "startDate": {
+    type: Date,
+    optional: true
+  },
+  "endDate": {
+    type: Date,
+    optional: true
+  },
   "isVisible": {
     type: Boolean,
     optional: true
@@ -197,6 +205,13 @@ export default function applyProductFilters(context, productFilters) {
         "price.max": {
           $lte: parseFloat(productFilters.priceMax)
         }
+      };
+    }
+
+    if (productFilters.startDate && productFilters.endDate) {
+      selector.createdAt = {
+        $gte: new Date(productFilters.startDate),
+        $lte: new Date(productFilters.endDate)
       };
     }
 
