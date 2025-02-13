@@ -810,4 +810,20 @@ extend type Query {
     "By default, products are sorted by createdAt. Set this to sort by one of the other allowed fields"
     sortBy: ProductSortByField = createdAt
   ): ProductConnection
+
+  productsOptimize(
+    first: Int
+    offset: Int
+    shopIds: [ID]!
+    after: String
+    productIds: [ID]
+    tagIds: [ID]
+    query: String
+    isArchived: Boolean
+    isVisible: Boolean
+    storeName: String
+    startDate: DateTime
+    endDate: DateTime
+    isSoldOut: Boolean
+  ): ProductConnection
 }
